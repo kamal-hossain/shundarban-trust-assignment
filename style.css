@@ -1,0 +1,1162 @@
+body{margin: 0;
+  height: 100%;  overflow-x: hidden;
+background-color: bisque;
+background-image: url(images/background.jpg); 
+}
+
+
+@font-face{
+  font-family: 'Indie Flower', cursive;
+  font-family: 'Shadows Into Light', cursive;
+
+  src: url(fonts/IndieFlower.ttf);
+
+  font-family: 'Raleway' 'ShadowsIntoLight' ;
+  src: url(fonts/Raleway-Regular.ttf);
+  src: url(fonts/Raleway-ExtraBold.ttf);
+  src: url(fonts/ShadowsIntoLight.ttf);
+
+}
+
+
+/*introdunction of page with logo*/
+.intro{width: 100%; display:inline-block; 
+  background:url(images/grass2.jpg) center center no-repeat;
+  background-size: 100% 100%; 
+position: relative;
+z-index: 1;}
+.intro img:nth-of-type(1){margin: 0 0 5px 25px;
+                          height: 80px; 
+                          width: 90px; 
+                          border-radius: 50%;}
+.intro img:nth-of-type(2){height: 90px; 
+                          width: 350px; 
+                        margin: 3px 0 0 0px; 
+                      /*box-shadow:20px 10px 50px 0px grey*/}
+.intro h3{
+font-family: 'Indie Flower', cursive;
+  color:white;
+  font-size: 28px;position: absolute;
+  top:-15px;
+  left: 520px;
+}
+.intro hr{ position: absolute;
+  top:0;
+  left: 490px;
+  box-shadow: 3px 3px 8px 3px green;
+  height: 10vh;
+border-width:0;}
+
+/*nav bar and cover photo*/
+.cover{box-shadow: 5px 10px 18px grey; margin: 0 0; }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: green;
+    font-size: 20px;
+}
+
+li {
+    float: left;
+}
+
+li a{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Raleway;
+    font-weight: 400;
+}
+
+li a:hover, .dropdown:hover{
+    background-color: red;
+}
+
+/*li.dropdown {
+    display: inline-block;
+}*/
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   /* z-index: 1;*/
+
+}
+
+.dropdown-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.dropdown-menu a:hover {background-color: yellow}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.dropdown:hover .dropdown-menu {margin-left: -1%;
+opacity: 0.9;
+}
+
+
+/*Search bar*/
+.search_container{display: inline-block; float: right;}
+.cover input[type=text]{ float: right; margin:15px 100px;
+ height: 30px; padding: 3px; box-sizing: border-box;}
+
+.cover .search_container button{background-color: #9CBD06;
+  position: relative;
+  left: 300px;
+  top: 15px;
+ width: 35px;
+ height: 30px;  
+cursor: pointer; border-style: none;
+ background-image: url(images/search_icon.png) ;
+background-size: 100% 100%;}
+
+/*coverimage after Nav bar*/
+ #cover1{width: 100%;
+height: 400px; margin: -5px 0px;
+animation-name: coverphoto;
+animation-duration: 15s;
+animation-iteration-count: infinite;
+background: no-repeat;
+background-size: 100% 100%;
+background-image: url(images/banner7.jpg);
+
+
+}
+
+@keyframes coverphoto{
+  0%{background-image: url(images/cover3.jpg);}
+  25%{background-image: url(images/cover2.jpg);}
+  50%{background-image: url(images/banner6.jpg);}
+  75%{background-image: url(images/banner7.jpg);}
+  100%{background-image: url(images/cover3.jpg);}
+}
+
+
+/*color changing line with donate button*/
+#coverheading{ margin: -13px 0;
+  width: 100%;
+  height: 70px;
+  animation-name: coverheading;
+  animation-duration: 5s;
+  animation-iteration-count: infinite; 
+  position: sticky;
+  top:0;
+  z-index: 1;
+}
+#coverheading p{text-align: center;
+  font-family: 'Shadows Into Light', cursive;
+
+font-weight: 800;}
+/*color changing line for donate button*/
+@keyframes coverheading {
+    0%   {background-color:#568A00;}
+    25%   {background-color:#284800;}
+    50%   {background-color:#528309;}
+    75%   {background-color:#34BD3D;}
+   100% {background-color:#8A8200;}
+}
+
+#coverheading p{color: white;
+    font-weight: bold;
+  padding: 10px 20px; 
+  margin-top: 0px;
+  /*font-family: "Arial";*/
+  font-size: 30px;
+  position: relative;}
+
+
+  /*donate button*/
+#coverheading p button{ 
+  background-color: #f4511e;
+  border: none;
+  border-radius: 4px;
+  color:white;
+  text-align: center;
+  font-size: 22px;
+  width: 200px;
+  height: 48px;
+  transition: 0.4s;
+  cursor: pointer;
+  margin: 5px;
+  vertical-align:middle;
+font-family: Raleway}
+/*#coverheading p button:after{
+  content: '\00bb';
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.9s;}*/
+#coverheading p button:hover {
+font-size: 28px;
+font-weight: bold;
+text-decoration: underline;
+
+}
+
+
+
+/*home-campain div*/
+.home-campaign{
+  margin:-28px auto 0;
+  width: 75%;
+  display: flex;
+  height: 550px;
+}
+.home-campaign>div{ margin:10px;} /*margin for boxes inside div, after display flex use*/
+
+#campaign-heading{
+  /*color: mediumspringgreen ;*/
+  text-shadow: 20px 20px black;
+  font-weight: bold;
+  width: 43%;
+  text-align: center;
+  height: 85px;
+  font-size: 48px;
+  margin-left:13%;
+  text-shadow: 0.9px 2px grey;
+  background-image: url(images/textback.png);
+  background-size: 100% 100%;
+}
+
+.home-campaign1,.home-campaign2,.home-campaign3 {
+  height: 800px;
+  width: 32%;
+}
+
+.home-campaign1 img{
+        height: 270px;
+        width: 100%;
+        border-top-right-radius: 50px;
+}
+.home-campaign1 p{
+  font-size: 22px;
+  font-weight: bold;
+  width: 100%;
+  height: 30%;
+  padding: 17px;
+  text-align: justify;
+  color: darkslategray;
+  background-color: lightgray;
+  margin: -15px 0;
+  box-sizing: border-box;
+  box-shadow: 0 4px 15px black;
+  overflow: auto;
+}
+
+.home-campaign2 img{
+  height: 270px;
+  width: 100%;
+    border-top-right-radius: 50px;
+}
+.home-campaign2 p{
+  font-size: 22px;
+  font-weight: bold;
+  width: 100%;
+  height: 30%;
+  padding: 17px;
+  text-align: justify;
+  color: darkslategray;
+  background-color: lightgray;
+  margin: -15px 0;
+  box-sizing: border-box;
+  box-shadow: 0 4px 15px black;
+  overflow: auto;
+}
+
+.home-campaign3 img{
+  height: 270px;
+  width: 100%;
+  border-top-right-radius: 50px;
+}
+
+.home-campaign3 p{
+  font-size: 22px;
+  font-weight: bold;
+  width: 100%;
+  height: 30%;
+  padding: 17px;
+  text-align: justify;
+  color: darkslategray;
+  background-color: lightgray;
+  margin:0;
+  margin: -15px 0;
+  box-sizing: border-box;
+  box-shadow: 0 4px 15px black;
+  overflow: hidden;
+}
+
+/*view all button home page*/
+.home-campaign+div{
+  color:darkcyan;
+  margin: 0 auto;
+  height: 40px;
+  text-align: center;
+  width: 75%;
+  
+}
+.home-campaign+div button{
+  background: none ;
+  color: darkred;
+  font-weight: bold;
+  height: 100%;
+  width: 26%;
+  font-size: 2em;
+  background-color: silver;
+  border-radius: 50px;
+}
+
+.home-campaign+div button:hover{
+    background-color: darkred;
+    color: silver;
+    transition: 2s ; 
+}
+
+/*newsletter home*/
+.newsletter-home{
+  width: 75%;
+  height: 270px;
+  margin: 60px auto;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  border-radius: 30px;
+}
+
+.newsletter-home img:nth-of-type(1){
+     width: 75%;
+     height: 100%;
+}
+
+
+.newsletter-home div em{color: red; 
+  font-size: 1.4em; 
+ text-shadow: 0 0 6px #FF0000, 0 0 10px white;}
+
+#subscribe-box{ margin-left: -10%; width:60%;
+background-color: #E9E9E1;
+  }
+
+
+.newsletter-home #subscribe-box form{
+  /*float: left;*/
+  position: relative;
+
+}
+
+#subscribe-box form input[name="name1"]{
+  background-color: white;
+  left: 20px;
+  width: 35%;
+  height: 30px;
+  top: 50px;text-decoration: none;
+  position: absolute;
+  font-family: serif;
+  border-radius: 10px;
+   box-shadow: 0 2px 10px black;
+}
+
+#subscribe-box form input[name="name2"]{
+  background-color: white;
+  left: 160px;
+  width: 40%;
+  height: 30px;text-decoration: none;
+  top: 50px;
+  position: absolute;
+  font-family: serif;
+  border-radius: 10px;
+   box-shadow: 0 2px 10px black;
+}
+#subscribe-box form input[name="email"]{
+  background-color: white;
+  position: absolute;
+  left: 20px;
+  width: 80%;
+  height: 30px;
+  top: 130px;text-decoration: none;
+  font-family: serif;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px black;
+}
+
+#subscribe-box form a{
+  text-decoration: none;
+
+}
+
+#subscribe-box form button{
+  background-color: #E63554;
+  position: absolute;
+  left: 25%;
+  width: 40%; 
+  height: 50px;
+  top: 190px;
+  text-decoration: none;
+  overflow:hidden;
+  border:none;
+  border-radius: 100px;
+
+
+}
+#subscribe-box form button a{
+  color:white;
+  font-size: 160%;
+  font-family: serif;
+  /*font-weight: bold;*/
+}
+#subscribe-box form button:hover{
+  transition:  2s;
+  transform: rotate(360deg);
+  background-color:black;
+}
+
+#rectangle{
+  left: 46%;
+  position: absolute;
+  border-right: 200px solid darkred ;
+  border-top:135px solid transparent;
+  border-bottom: 135px solid transparent;
+}
+
+
+/*after home page newsletter*/
+.home-animal-info{
+    display: flex;
+    width: 75%; 
+    margin:0 auto;
+}
+
+.home-animal-info div{
+      height: 300px;
+      width: 25%;
+      margin:10px;
+     position: relative;    
+     overflow: hidden;
+     border-top-left-radius: 50px; 
+     border-bottom-right-radius: 50px;
+}
+
+.home-animal-info div > img{
+  height: 300px;
+  width: 100%;
+
+}
+
+.home-animal-info div>p{
+  position: absolute;
+  bottom: 0;
+  color:white;
+  font-weight: bold;
+  opacity: 0.5;
+  background-color: black;
+  text-align: center;  font-size: 32px;
+}
+.home-animal-info div>p:hover {
+    background-color: black;
+    opacity: 1;
+   transition: 2s ease;
+}
+.home-animal-info div>p>button{
+  border:none;
+  height: 30px;
+  border-radius: 150px;
+  font-size: 16px;
+  font-weight: bold;
+  color:darkblue;
+  background-color: aqua;
+}
+
+/*home-acheivement section*/
+.achievement{
+  width: 75%;
+  margin:20px auto;
+}
+.achievement img:nth-child(odd){
+  width: 50%;
+  height: 80px;
+  margin:0 25%;
+}
+
+#achievement-div{
+  width: 75%;
+  margin:0 auto;
+  display: flex;
+}
+
+#achievement-div div{
+  width: 30%;
+  margin:10px;
+    
+
+}
+
+#achievement-div div>img{
+  height: 70%;
+  width: 100%;
+    box-shadow: 0 4px 4px black;
+
+
+}
+#achievement-div div>p{
+  height: 30%;
+  background-color: green;
+  color: white;
+  padding: 15px;
+/*  font-weight: bold;
+*/ position: relative;
+  top: -80px;
+  font-size: 120%;
+  border-top-right-radius: 50px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 4px black;
+  overflow: auto;
+
+}
+
+/*foter section*/
+.footer{width: 100%;
+height: 250px; display: flex;
+overflow: hidden;
+ background:url(images/tiger1footer.jpg) 
+ no-repeat center center black ;
+ z-index: -2;
+ position: relative;
+}
+
+.footer img:nth-of-type(1){margin: 0 0  5px 25px;
+ height: 80px; width: 90px; border-radius: 50%;}
+.footer img:nth-of-type(2){height: 90px; width: 350px; 
+margin: 3px 0 0 0; /*box-shadow:20px 10px 50px 0px grey*/}
+
+
+#opacity{
+  height: 100%;
+  width: 100%;
+ background-color: black;
+ z-index: -1;
+ opacity: 0.9;
+ position: absolute;
+ top: 0;
+}
+
+.footer p{
+    color:white;
+    text-align:justify;
+    line-height: 1.5;
+    width: 400px;
+    font-size: 90%;
+    font-family: arial;
+    position:absolute;
+    top: 80px;
+    margin-left: 100px;
+height: 100px;
+
+}
+
+.footer hr{
+  width: 80%;
+  height:0px;
+  bottom:10px;
+  left: 100px;
+  border-width:0;
+  box-shadow: 3px 3px 8px 3px green;
+  position: absolute;
+}
+
+.footer pre{
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 530px;
+  font-size: 16px;
+}
+.footer pre ul
+{
+  background: none;
+  color:yellow;
+  text-decoration:underline white;
+}
+
+.footer #connect{
+  position: absolute;
+  top: 50px;
+  left: 910px;
+  display: flex;
+}
+.footer #connect img{
+  height: 30px;
+  width: 30px;
+  margin: 5px;
+
+}
+.footer p:nth-of-type(2){
+  color: white;
+  margin-top: -60px;
+  font-size: 17px;
+  font-weight: bold;
+  position: absolute;
+  margin-left: 920px;
+}
+
+/*Education page*/
+.edu-heading{
+
+  width: 370px;
+height: 80px;
+  border:10px outset green;
+  margin:30px 12%;
+  background-color: white;
+  border-top-right-radius: 100px;
+
+  
+}
+.edu-heading h1{
+  text-align: center;
+  color: darkcyan;
+font-family: 'Shadows Into Light', cursive;
+
+}
+.edu-boxes{
+    width: 75%;
+    margin:0 auto;
+}
+
+.edu-box1{
+    overflow: hidden;
+
+      width: 100%;
+    margin:0 auto;
+ border:7px inset #B9DA3B;
+ display: flex;
+     background-color: thistle;
+
+}
+.edu-box1 img{
+  width: 400px;
+  height: 250px;
+  margin: 10px;
+
+}
+.edu-box1 p{
+  text-align: justify;
+   margin: 10px;
+   font-size: 1.1em;
+}
+
+.edu-box2{
+        background-color: thistle;
+      width: 100%;
+          overflow: hidden;
+
+    margin:0 auto;
+ border:7px outset #B9DA3B;
+ display: flex;
+}
+.edu-box2 p{
+    text-align: justify;
+   margin: 10px;
+   font-size: 1.1em;
+   width: 54%;
+
+}
+.edu-box2 img{
+    width: 400px;
+  height: 250px;
+  margin: 10px;
+}
+
+
+/*donate div division*/
+.edu-donate{
+    width: 70%;
+    margin: 20px auto;
+    position: relative;
+    font-family: arial;
+}
+.edu-donate img{
+  width: 100%;
+  height: 330px;
+  /*opacity: .7;*/
+}
+.edu-donate h3{
+  position: absolute;
+  top: 0;
+  color: white;
+  margin: 10px;
+  font-size: 27px;
+  text-shadow: 5px 5px  13px grey;
+}
+.edu-donate h2{
+  position: absolute;
+  top: 35px;
+  margin:10px;
+  color:white;
+  font-size:43px;
+  text-shadow: 5px 5px  10px orange;
+z-index: 1;}
+.edu-donate p{
+  position: absolute;
+  top:150px;
+  margin:10px;
+  font-size: 17px;
+  color: white;
+  background-color: rgb(10,0,20,10.3);
+}
+
+.edu-donate button{
+    background-color: #f4511e;
+  border: none;
+  border-radius: 4px;
+  color:white;
+  text-align: center;
+  font-size: 22px;
+  width: 200px;
+  height: 48px;
+  cursor: pointer;
+  font-family: Raleway;
+  position:absolute;
+  bottom:20px;
+  margin-left:37%;
+}
+.edu-donate button:hover{
+      font-size: 28px;
+      transition: 0.4s;
+      text-decoration: underline;
+      background-color: white; 
+      color:#f4511e;
+}
+
+
+/*edu page shundarban save event section*/
+.save-shundarban{
+  width: 75%;
+  margin:30px auto;
+  position: relative;
+ box-shadow: 5px 5px 20px;
+ background-color: lavender;
+
+
+}
+.save-shundarban img:nth-of-type(1){
+  width: 80%;
+  height: 200px;
+  margin-left:8%;
+  margin-top: 20px;
+  border: teal inset 20px;
+}
+.save-shundarban img:nth-of-type(2){
+      width: 60%;
+      height: 400px;
+      margin-left: 17%;
+      margin-top: 4%;margin-bottom: 15px;
+      border: 15px groove teal;
+      border-radius: 20px;
+}
+
+
+/*edu-trip section*/
+.edu-trip{
+  width: 75%;
+  margin: 0 auto;
+  font-size: 50px;
+  background:url(images/trip1.jpg) rgba(0,0,0,0.9);
+  text-shadow: 5px 5px 15px;
+  position: relative;
+  box-shadow: 2px 2px 10px;
+}
+.edu-trip p {
+  color:black;
+  font-size: 36px;
+  background-color: silver;
+}
+
+.edu-trip p button{
+  border:1px dashed black;
+  border-radius: 30px;
+  height: 40px;
+  width: 160px;
+  font-size: 25px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.edu-trip p button:hover{
+    background-color: black;
+    color:white;
+    transition: 2s;
+}
+
+
+
+/*mangrove page importance section*/
+.man-importance{
+    width: 75%;
+    margin:20px auto; 
+    background-color: lightcyan;
+
+}
+.man-importance h1{
+  font-size: 40px;
+  margin-left: 15px;
+  text-align: center;
+  color: blue;
+}
+.man-importance p{
+  font-size: 22px;
+  margin-left: 15px;
+}
+.man-divs{
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+}
+#man-div1{
+  display: block;
+  width: 48%;
+  margin-left:10px;
+}
+#man-div2{
+  display: block;
+  width: 48%;
+  margin-left: 10px;
+  margin-top:0px;
+
+}
+#man-div1 img {
+  width: 100%;
+  height: 300px;
+}
+
+#man-div2 img {
+  width: 100%;
+  height: 300px;
+}
+
+#man-div2 h2{
+  text-align: center;
+  color: red;
+
+}
+#man-div1 h2{
+  text-align: center;
+ color: green;
+}
+ #man-div1 p{
+  font-size: 19px;
+  text-align: justify;
+}
+
+
+#man-div2 p{
+    font-size: 19px;
+  text-align: justify;
+}
+
+/*mangrove gallary*/
+#mangrove-heading{
+  width: 60%;
+  margin:30px auto;
+  font-size: 41px;
+  text-align: center;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  background: url(images/man-banner.jpg) no-repeat;
+  background-size: 100% 100%;
+  box-shadow: 5px 5px 15px;
+}
+#mangrove-heading a{
+  color: red;
+}
+
+
+
+
+/*aniaml adoption page*/
+.adopt{
+width: 75%;
+margin: 0 auto;
+background-color: grey;
+border-radius: 40px;
+box-shadow: 2px 2px 10px;
+}
+
+.adopt h1{
+  color:white;
+  text-align: center;
+  font-size: 45px;
+}
+
+#animals{
+  width: 70%;
+  margin: 20px auto;
+  background-color: black;
+  box-shadow: 2px 2px 10px;
+
+}
+#animals>p { text-align: center;   
+  color:white;
+     font-size: 25px;
+     text-decoration: underline; }
+
+.row1{
+  width: 100%;
+  display: flex;
+  height: 430px;
+}
+.column1, .column2, .column3{
+  width: 32%;
+height:370px;
+color: white;
+display: block;
+text-align: center;
+margin-left: 9px;
+margin-top: 5px;
+}
+.row1 img{
+width: 100%;
+height: 270px;
+border:;}
+.row1 p{
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.row1 button{
+  height: 50px;
+  width: 200px;
+  font-size: 22px;
+  font-weight: bold;
+border:none;
+cursor: pointer;
+}
+.row1 button:hover{
+  background-color: grey;
+  color: white;
+}
+/*about rainforest page, gallay modified class*/
+
+.mangroveid{
+  background-color: none;
+     width: 73%;
+     height: 1400px;
+  margin: 0 auto;
+  background-color: greenyellow;
+  color: black;
+  overflow: hidden;
+}
+
+.mangrove{
+border: 2px solid green;
+height: 430px;
+color: black;
+margin-right: 8px;
+}
+
+.mangrove1{
+  margin-top: 35px;
+}
+
+
+
+/*animal donate page*/
+
+#heading{
+  background-color: rgba(0,0,0,0.5);
+  width: 75%;
+  font-size: 48px;
+  margin: 20px auto;
+  padding: 10px;
+  color:white;
+  box-sizing: border-box;
+  text-shadow: 3px 3px 0 blue,
+     -1px -1px 0 blue,  
+      1px -1px 0 blue,
+      -1px 1px 0 blue,
+       1px 1px 0 blue;
+}
+.donate-animal{
+  box-sizing: border-box;
+      width: 75%;
+      margin:20px auto;
+      font-size: 19px;
+      padding: 10px;
+      background-color: white;
+      border-radius: 30px;
+      background-color: skyblue;
+      box-shadow: 5px 5px 10px;
+}
+
+.donate-animal-form{
+  background-color: mintcream;
+
+}
+.donate-animal-form input[type=nametext1]{
+  height: 30px;
+  border:none;
+  box-shadow: 2px 2px 7px black;
+  border-radius: 10px;
+  width: 250px;
+    margin-left: 5px;
+
+}
+.donate-animal-form input[type=nametext2]{
+  height: 30px;
+  border:none;
+  box-shadow: 2px 2px 7px black;
+  border-radius: 10px;
+    width: 250px;
+      margin-left: 5px;
+
+
+}
+.donate-animal-form input[type=email]{
+  height: 30px;
+  border:none;
+  box-shadow: 2px 2px 7px black;
+  border-radius: 10px;
+  margin-left: 5px;
+  width: 500px;
+
+}
+.donate-animal-form input[type=checkbox]{
+  border-radius: 10px;
+  margin-left: 5px;
+
+  
+
+}
+
+label[for="first"]{
+  font-weight: bold;font-size: 25px;
+}
+label[for="last"]{
+  margin-left: 70px;
+  font-weight: bold;font-size: 25px;
+}
+
+legend {
+  font-size: 40px;
+  font-weight: bold;
+
+}
+
+.donate-animal-form button{
+      height: 50px;
+      font-size: 25px;
+      font-weight: bold;
+      width: 300px;
+}
+.donate-animal-form button:hover{
+  background-color: black;
+  color: white;
+}
+
+
+/*buy tree page*/
+.tree{
+    width: 75%;
+    margin: 0 auto;
+      border-radius: 50px;
+        box-shadow: 2px 2px 10px;
+
+}
+
+.tree h1{
+  height: 70px;
+  padding: 30px;
+  color: white;
+  font-size: 50px;
+  background-color: maroon;        
+  border-radius: 50px;
+
+}
+
+.tree-sec{
+  width: 75%;
+  margin:20px auto;
+  background-color: tan;
+  box-shadow: 2px 2px 10px;
+}
+
+.tree-sec h2{
+  padding: 30px;
+  color: darkmagenta;
+  font-size: 30px;
+  text-decoration: underline;
+}
+
+.tree-img{
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+}
+
+#img-tree{
+margin:10px;  width: 50%;
+  display: block;
+}
+#img-tree img{
+  width: 100%;
+}
+#img-tree h3{
+  text-align: center;
+  font-size: 30px;
+}
+.tree-img button{
+  cursor: pointer;
+}
+
+#img-tree button:hover{
+  border:solid 4px green;
+}
+/*history page*/
+.history{
+  width: 100%;
+  box-shadow: 5px 5px 15px;
+}
+
+.history img{
+  width: 100%;
+  height: 400px;
+}
+
+.history1 {
+  width: 75%;
+  margin:40px auto;
+  padding: 10px;
+  background-color: forestgreen;
+  color: white;
+  text-align: justify;
+}
+.history1 h1{
+  background-color: grey;
+  padding: 10px;
+  font-family: ;
+}
+.history1 img{
+  width: 100%;
+  height: 250px;
+}
+
+/*contact us page*/
+.contact{
+  width: 75%;
+  margin:0 auto;
+}
+.contact img{
+      border-bottom-right-radius: 50px;
+      border-bottom-left-radius: 50px;
+        box-shadow: 2px 2px 10px;
+
+}
