@@ -1,4 +1,17 @@
+<img src="./images/shundarban-trust-assignment.png" title="shundarban-trust-assignment" alt="shundarban-trust-assignment" width="300px">
+
 # shundarban-trust-assignment
-**This is my very first project at web development. 
-...I made this project approximately at __December 2018__  for my course assginment in university. 
-...It is one of the major inspiration for me to come at web development.**
+> University assignment 
+
+> Very first project in web development at Dec 2018. 
+
+# Live Demo
+#### https://bit.ly/3hPuhxZ
+
+## Major Web technologies used:
+* HTML
+* CSS
+* External fonts
+* Mobile responsiveness [NO]
+
+
